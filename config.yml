@@ -3,16 +3,16 @@ columns_file:
   path: data/20130502/columns.txt
 frequency_script:
   type: File
-  path: scripts/frequency.py
+  path: scripts/cpp-applications/build/frequency
 individuals_script:
   type: File
-  path: scripts/individuals
+  path: scripts/cpp-applications/build/individuals
 individuals_merge_script:
   type: File
-  path: scripts/individuals_merge
+  path: scripts/cpp-applications/build/individuals_merge
 mutation_overlap_script:
   type: File
-  path: scripts/mutation_overlap.py
+  path: scripts/cpp-applications/build/mutation_overlap
 populations:
   - type: File
     path: data/populations/AFR
@@ -51,7 +51,7 @@ sift_files:
     path: data/20130502/sifting/ALL.chr10.phase3_shapeit2_mvncall_integrated_v5.20130502.sites.annotation.vcf.gz
 sifting_script:
   type: File
-  path: scripts/sifting
+  path: scripts/cpp-applications/build/sifting
 snp_files:
   - type: File
     location: data/20130502/ALL.chr1.250000.vcf.gz

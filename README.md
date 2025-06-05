@@ -1,6 +1,7 @@
 # 1000Genomes Workflow - CWL Implementation
 
 This repository contains a [Common Workflow Language](https://www.commonwl.org/) (CWL) implementation of the [1000Genomes Workflow](https://github.com/pegasus-isi/1000genome-workflow), initially implemented for the [Pegasus](https://pegasus.isi.edu/) workflow management system.
+Moreover, this workflow provides C++ versions of the applications originally written in Bash and Python, which are more performant in terms of execution time.
 
 Note that all the metadata reported in the `*.cwl` files, particularly the `s:author` and `s:license` fields, concern only the CWL descriptions themselves, not the related script, whose [License](https://github.com/pegasus-isi/1000genome-workflow/blob/ee083a8a55436d437e3cf9f542f12d491b739c21/LICENSE) is reported on the original repository. If you want to give credit to the original 1000Genomes Workflow, please cite the following article:
 
@@ -25,8 +26,17 @@ pip install -r requirements.txt
 
 Workflow input data are stored online on the [1000Genomes workflow repository](https://github.com/pegasus-isi/1000genome-workflow) and the [1000Genomes FTP server](https://ftp.1000genomes.ebi.ac.uk). The `download_data.sh` script creates the data directory structure and downloads all the required data in the proper locations.
 
-Once all software and data dependencies are installed, the workflow can be launched using the following command:
+
+Once all software and data dependencies are installed, the C++ applications must be compiled.
+Follow the [guideline](scripts/cpp-applications/README.md) for instructions.
+
+Compilied the application, the workflow can be launched using the following command:
 
 ```bash
 cwl-runner main.cwl config.yml
 ```
+
+## 1000 Genome applications written in C++
+
+The applications were been implemented in C++ by:
+_Martinelli, A.R., Torquati, M., Aldinucci, M., Colonnelli, I., Cantalupo, B.: Capio: a middleware for transparent i/o streaming in data-intensive workflows. In: 2023 IEEE 30th International Conference on High Performance Computing, Data, and Analytics (HiPC). IEEE, Goa, India (2023). [doi:10.1109/HiPC58850.2023.00031](https://doi.org/10.1109/HiPC58850.2023.00031)_.
