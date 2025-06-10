@@ -38,5 +38,5 @@ cwl-runner main.cwl config.yml
 
 ## 1000 Genome applications written in C++
 
-The applications were been implemented in C++ by:
+The applications were implemented  in C++ by:
 _Martinelli, A.R., Torquati, M., Aldinucci, M., Colonnelli, I., Cantalupo, B.: Capio: a middleware for transparent i/o streaming in data-intensive workflows. In: 2023 IEEE 30th International Conference on High Performance Computing, Data, and Analytics (HiPC). IEEE, Goa, India (2023). [doi:10.1109/HiPC58850.2023.00031](https://doi.org/10.1109/HiPC58850.2023.00031)_.
